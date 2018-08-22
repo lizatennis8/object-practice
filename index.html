@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Halt & Pig Dice</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Pig Dice</h2>
+      <div class="row">
+          <div class="col-md-6">
+            <form id="player-input-1">
+            <h3>Player 1</h3>
+              <div class="form-group">
+                <label for="player1">Name:</label>
+                <input type="text" id="player-1">
+              </div>
+              <button id="add-player-1-btn" type="submit" class="btn btn-primary">Add Player</button>
+            </form>
+            <button id="player-1-roll" class="btn btn-primary" type="button">Roll</button>
+            <button id="player-1-hold" class="btn btn-primary" type="button">Hold</button>
+          </div>
+          <div class="col-md-6">
+            <form id="player-input-2">
+              <h3>Player 2</h3>
+              <div class="form-group">
+                <label for="player2">Name:</label>
+                <input type="text" id="player-2">
+              </div>
+              <button id="add-player-2-btn" type="submit" class="btn btn-primary">Add Player</button>
+            </form>
+            <button id="player-2-roll" class="btn btn-primary" type="button">Roll</button>
+            <button id="player-2-hold" class="btn btn-primary" type="button">Hold</button>
+        </div>
+      </div>
+        <button id="play-btn" class="btn btn-primary" type="button">Let's Play</button>
+        <div id="dice">Dice Value</div>
+      </div>
+    </div>
+  </body>
+</html>

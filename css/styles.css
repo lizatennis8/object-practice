@@ -1,0 +1,14 @@
+h2{
+  text-align: center;
+}
+#player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold {
+  display: none;
+}
+#play-btn {
+  display: block;
+  margin: 0 auto;
+}
+#dice {
+  display: none;
+  text-align: center;
+}
