@@ -1,7 +1,7 @@
 h2{
   text-align: center;
 }
-#player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold {
+#player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold, #snout, #two, #three, #four, #five, #six {
   display: none;
 }
 #play-btn {
@@ -12,6 +12,20 @@ h2{
   display: none;
   text-align: center;
 }
-/* #score-board div {
-  border: 1px solid #000;
-} */
+body{
+  background-color: #efc2db;
+}
+.btn {
+  background-color: white;
+  color: black;
+  border-color: black;
+
+}
+.btn:hover{
+  background-color: grey;
+}
+img{
+  width: 202px;
+  display: block;
+  margin:0 auto;
+}

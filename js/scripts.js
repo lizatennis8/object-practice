@@ -12,7 +12,6 @@ function diceRoll() {
 Players.prototype.totalingRoundPoints = function(currentRoll) {
   if(currentRoll === 1) {
     this.roundTotal = 0;
-    console.log("Done");
   } else {
     this.roundTotal += currentRoll;
   }
@@ -24,7 +23,27 @@ Players.prototype.totalingScore = function(roundTotal) {
 }
 
 // UI logic
+
+
+
 $(document).ready(function() {
+  var oneDice = "img/fatpig.png"
+  function diceImages (diceDisplayed) {
+    if (diceDisplayed === 1) {
+      $("#dice").html("<img src='img/snout.jpg' id='snout'>");
+    } else if (diceDisplayed === 2) {
+      $("#dice").html("<img src='img/two.jpg'>");
+    } else if (diceDisplayed === 3) {
+      $("#dice").html("<img src='img/three.jpg'>");
+    } else if (diceDisplayed === 4) {
+      $("#dice").html("<img src='img/four.jpg'>");
+    } else if (diceDisplayed === 5) {
+      $("#dice").html("<img src='img/five.jpg'>");
+    } else if (diceDisplayed === 6) {
+      $("#dice").html("<img src='img/six.jpg'>");
+    }
+  }
+
   var player1Name;
   var player2Name;
   var player1;
@@ -78,7 +97,9 @@ $(document).ready(function() {
 
   $("#player-1-roll").click(function() {
     var currentRoll = diceRoll();
-    $("#dice").text(currentRoll);
+    // $("#dice").text(currentRoll);
+    diceImages(currentRoll);
+    console.log(currentRoll);
     player1.totalingRoundPoints(currentRoll);
     $("#round-points-1").text(player1.roundTotal);
     // player1.totalingScore(player1.roundTotal);
@@ -95,7 +116,9 @@ $(document).ready(function() {
 
   $("#player-2-roll").click(function() {
     var currentRoll = diceRoll();
-    $("#dice").text(currentRoll);
+    // $("#dice").text(currentRoll);
+    diceImages(currentRoll);
+    console.log(currentRoll);
     player2.totalingRoundPoints(currentRoll);
     $("#round-points-2").text(player2.roundTotal);
     // player1.totalingScore(player1.roundTotal);
