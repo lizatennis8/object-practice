@@ -20,47 +20,93 @@ Players.prototype.totalingRoundPoints = function(currentRoll) {
 
 Players.prototype.totalingScore = function(roundTotal) {
   this.score += roundTotal;
-  console.log("Round: " + this.roundTotal);
-  console.log("Score: " + this.score);
+  this.roundTotal = 0;
 }
 
 // UI logic
 $(document).ready(function() {
+  var player1Name;
+  var player2Name;
   var player1;
   var player2;
   $("#player-input-1").submit(function(event) {
     event.preventDefault();
 
-    var player1Name = $("#player-1").val();
+    player1Name = $("#player-1").val();
     player1 = new Players(player1Name);
     console.log(player1);
-    $("#add-player-1-btn").hide();
-    $("#player-1-roll").show();
-    $("#player-1-hold").show();
+    $("#player-input-1").hide();
   });
 
   $("#player-input-2").submit(function(event) {
     event.preventDefault();
 
-    var player2Name = $("#player-2").val();
+    player2Name = $("#player-2").val();
     player2 = new Players(player2Name);
-    $("#add-player-2-btn").hide();
-    $("#player-2-roll").show();
-    $("#player-2-hold").show();
+    $("#player-input-2").hide();
   });
 
   $("#play-btn").click(function() {
     $(this).hide();
     $("#dice").show();
+    $("#player-1-roll").show();
+    $("#player-1-hold").show();
+    $("#name1").text(player1Name + "'s score is:");
+    $("#name2").text(player2Name + "'s score is:");
   });
+
+  $("#player-1-hold").click(function() {
+    $("#player-1-roll").hide();
+    $("#player-1-hold").hide();
+    $("#player-2-roll").show();
+    $("#player-2-hold").show();
+    player1.totalingScore(player1.roundTotal);
+    $("#round-points-1").text("");
+    $("#current-score-1").text(player1.score);
+  });
+
+  $("#player-2-hold").click(function() {
+    $("#player-2-roll").hide();
+    $("#player-2-hold").hide();
+    $("#player-1-roll").show();
+    $("#player-1-hold").show();
+    player2.totalingScore(player2.roundTotal);
+    $("#round-points-2").text("");
+    $("#current-score-2").text(player2.score);
+  });
+
 
   $("#player-1-roll").click(function() {
     var currentRoll = diceRoll();
     $("#dice").text(currentRoll);
     player1.totalingRoundPoints(currentRoll);
+    $("#round-points-1").text(player1.roundTotal);
+    // player1.totalingScore(player1.roundTotal);
     if(player1.roundTotal === 0) {
       $("#player-1-roll").hide();
+      $("#player-1-hold").hide();
+      $("#player-2-roll").show();
+      $("#player-2-hold").show();
     }
-    console.log(player1.roundTotal);
+    console.log("Total: "+player1.roundTotal);
+    console.log("Score: "+player1.score);
+    console.log(player1);
+  });
+
+  $("#player-2-roll").click(function() {
+    var currentRoll = diceRoll();
+    $("#dice").text(currentRoll);
+    player2.totalingRoundPoints(currentRoll);
+    $("#round-points-2").text(player2.roundTotal);
+    // player1.totalingScore(player1.roundTotal);
+    if(player2.roundTotal === 0) {
+      $("#player-2-roll").hide();
+      $("#player-2-hold").hide();
+      $("#player-1-roll").show();
+      $("#player-1-hold").show();
+    }
+    console.log("Total: "+player2.roundTotal);
+    console.log("Score: "+player2.score);
+    console.log(player2);
   });
 });
