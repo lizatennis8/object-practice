@@ -1,5 +1,7 @@
 h2{
   text-align: center;
+  font-family: 'Londrina Outline', cursive;
+  font-size: 84px;
 }
 #player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold, #snout, #two, #three, #four, #five, #six {
   display: none;
@@ -13,7 +15,7 @@ h2{
   text-align: center;
 }
 body{
-  background-color: #efc2db;
+  background-color: #fca9a1;
 }
 .btn {
   background-color: white;
