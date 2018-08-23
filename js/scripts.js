@@ -22,11 +22,18 @@ Players.prototype.totalingScore = function(roundTotal) {
   this.roundTotal = 0;
 }
 
+Players.prototype.checkTotal = function() {
+  if (this.score >= 50) {
+    return true;
+  }
+}
+
 // UI logic
 
 function enablePlay(buttonClick) {
   if(buttonClick === 2) {
-    $("#play-btn").show();
+    $("#pig-dice").show();
+    $("#snoot-image").hide();
   }
 }
 
@@ -34,7 +41,7 @@ $(document).ready(function() {
   var oneDice = "img/fatpig.png"
   function diceImages (diceDisplayed) {
     if (diceDisplayed === 1) {
-      $("#dice").html("<img src='img/fatpig.png'>");
+      $("#dice").html("<img src='img/fatpig.png'>" + "YA GOT PIGGED!");
     } else if (diceDisplayed === 2) {
       $("#dice").html("<img src='img/two.jpg'>");
     } else if (diceDisplayed === 3) {
@@ -91,6 +98,10 @@ $(document).ready(function() {
     player1.totalingScore(player1.roundTotal);
     $("#round-points-1").text("");
     $("#current-score-1").text(player1.score);
+    if (player1.checkTotal() === true) {
+      $("#playZone").hide();
+      $("#winner").show();
+    }
   });
 
   $("#player-2-hold").click(function() {
@@ -101,6 +112,10 @@ $(document).ready(function() {
     player2.totalingScore(player2.roundTotal);
     $("#round-points-2").text("");
     $("#current-score-2").text(player2.score);
+    if (player2.checkTotal() === true) {
+      $("#playZone").hide();
+      $("#winner").show();
+    }
   });
 
 

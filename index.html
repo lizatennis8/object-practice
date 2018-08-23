@@ -11,68 +11,76 @@
   </head>
   <body>
     <div class="container">
-      <h2>PIG DICE</h2>
-      <img src="img/snoot.png">
-      <div class="row">
-          <div class="col-md-6">
-            <form id="player-input-1">
-            <h3>Player 1</h3>
-              <div class="form-group">
-                <label for="player1">Name:</label>
-                <input type="text" id="player-1">
-              </div>
-              <button id="add-player-1-btn" type="submit" class="btn">Add Player</button>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <form id="player-input-2">
-              <h3>Player 2</h3>
-              <div class="form-group">
-                <label for="player2">Name:</label>
-                <input type="text" id="player-2">
-              </div>
-              <button id="add-player-2-btn" type="submit" class="btn">Add Player</button>
-            </form>
-        </div>
-      </div>
-
-
-
-
-      <div class="row">
-        <div class="col-md-4" id="board1">
-          <button id="player-1-roll" class="btn" type="button">Roll</button>
-          <button id="player-1-hold" class="btn" type="button">Hold</button>
-          <div id="round-points-1"></div>
-        </div>
-        <div class="col-md-4" id="pig-dice">
-          <button id="play-btn" class="btn" type="button">Let's Play</button>
-          <div id="dice">
-            <!-- <img src="img/snout.jpg" id="snout">
-            <img src="img/fatpig.png" id="fatpig">
-            <img src="img/two.jpg" id="two">
-            <img src="img/three.jpg" id="three">
-            <img src="img/four.jpg" id="four">
-            <img src="img/five.jpg" id="five">
-            <img src="img/six.jpg" id="six"> -->
+      <div id="playZone">
+        <h2>PIG DICE</h2>
+        <img src="img/snoot.png" id="snoot-image">
+        <div class="row">
+            <div class="col-md-6">
+              <form id="player-input-1">
+                <div class="form-group">
+                  <h4>Player One</h4>
+                  <!-- <label for="player1">Player 1:</label> -->
+                  <input type="text" id="player-1">
+                </div>
+                <button id="add-player-1-btn" type="submit" class="btn">PIG ME</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <form id="player-input-2">
+                <div class="form-group">
+                  <!-- <label for="player2">Player 2:</label> -->
+                  <h4>Player Two</h4>
+                  <input type="text" id="player-2">
+                </div>
+                <button id="add-player-2-btn" type="submit" class="btn">PIG ME</button>
+              </form>
           </div>
         </div>
-        <div class="col-md-4" id="board2">
-          <button id="player-2-roll" class="btn" type="button">Roll</button>
-          <button id="player-2-hold" class="btn" type="button">Hold</button>
-          <div id="round-points-2"></div>
-        </div>
-      </div>
 
-      <div class="row" id="score-board">
-          <div class="col-md-6">
+
+
+
+        <div class="row">
+          <div class="col-md-4" id="board1">
             <h3><span id="name1"></span><span id="current-score-1"></span></h3>
+            <button id="player-1-roll" class="btn" type="button">Roll</button>
+            <button id="player-1-hold" class="btn" type="button">Hold</button>
+            <div id="round-points-1"></div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4" id="pig-dice">
+            <button id="play-btn" class="btn" type="button">Let's Play</button>
+            <div id="dice">
+              <!-- <img src="img/snout.jpg" id="snout">
+              <img src="img/fatpig.png" id="fatpig">
+              <img src="img/two.jpg" id="two">
+              <img src="img/three.jpg" id="three">
+              <img src="img/four.jpg" id="four">
+              <img src="img/five.jpg" id="five">
+              <img src="img/six.jpg" id="six"> -->
+            </div>
+          </div>
+          <div class="col-md-4" id="board2">
             <h3><span id="name2"></span><span id="current-score-2"></span></h3>
+            <button id="player-2-roll" class="btn" type="button">Roll</button>
+            <button id="player-2-hold" class="btn" type="button">Hold</button>
+            <div id="round-points-2"></div>
           </div>
-      </div>
+        </div>
 
+        <!-- <div class="row" id="score-board">
+            <div class="col-md-6">
+              <h3><span id="name1"></span><span id="current-score-1"></span></h3>
+            </div>
+            <div class="col-md-6">
+              <h3><span id="name2"></span><span id="current-score-2"></span></h3>
+            </div>
+        </div> -->
+      </div>
+      <div id="winner">
+        <h3>Congratulations, <span id="winner-name"></span> you won!!</h3>
+        <img src="img/tenor.gif" id="piggif">
+        <p>Thanks for playing Pig Dice!</p>
+      </div>
     </div>
   </body>
 </html>
