@@ -41,7 +41,7 @@ $(document).ready(function() {
   var oneDice = "img/fatpig.png"
   function diceImages (diceDisplayed) {
     if (diceDisplayed === 1) {
-      $("#dice").html("<img src='img/fatpig.png'>" + "YA GOT PIGGED!");
+      $("#dice").html("<img id='pleasework' src='img/fatpig.png'>" + "YA GOT PIGGED!");
     } else if (diceDisplayed === 2) {
       $("#dice").html("<img src='img/two.jpg'>");
     } else if (diceDisplayed === 3) {

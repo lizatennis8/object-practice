@@ -17,6 +17,10 @@ h2{
   text-align: center;
   margin-top: 100px;
 }
+#snoot-image, #piggif, #pleasework{
+  box-shadow: none;
+}
+
 #pig-dice{
   display: none;
 }
@@ -36,7 +40,8 @@ img{
   width: 202px;
   display: block;
   margin:0 auto;
-  border-radius: 20px;
+  border-radius: 25px;
+  box-shadow: 12px 12px 29px #555;
 }
 h3{
 text-align: center;
