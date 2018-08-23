@@ -2,66 +2,62 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Halt & Pig Dice</title>
+    <meta name="description" content="Baby's First Videogame">
+    <title>Fighting Game</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Donegal+One|Joti+One|Kite+One|Londrina+Outline|Orienta" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/gamemanager.js"></script>
+    <script src="js/enemies.js"></script>
+    <script src="js/player.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div id="playZone">
-        <h2>PIG DICE</h2>
-        <img src="img/snoot.png" id="snoot-image">
-        <div class="row">
-            <div class="col-md-6">
-              <form id="player-input-1">
-                <div class="form-group">
-                  <h4>Player One</h4>
-                  <input type="text" id="player-1">
-                </div>
-                <button id="add-player-1-btn" type="submit" class="btn">PIG ME</button>
-              </form>
-            </div>
-            <div class="col-md-6">
-              <form id="player-input-2">
-                <div class="form-group">
-                  <h4>Player Two</h4>
-                  <input type="text" id="player-2">
-                </div>
-                <button id="add-player-2-btn" type="submit" class="btn">PIG ME</button>
-              </form>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="col-md-4" id="board1">
-            <h3><span id="name1"></span><span id="current-score-1"></span></h3>
-            <button id="player-1-roll" class="btn" type="button">Roll</button>
-            <button id="player-1-hold" class="btn" type="button">Hold</button>
-            <div id="round-points-1"></div>
-          </div>
-          <div class="col-md-4" id="pig-dice">
-            <button id="play-btn" class="btn" type="button">Let's Play</button>
-            <div id="dice">
-            </div>
-          </div>
-          <div class="col-md-4" id="board2">
-            <h3><span id="name2"></span><span id="current-score-2"></span></h3>
-            <button id="player-2-roll" class="btn" type="button">Roll</button>
-            <button id="player-2-hold" class="btn" type="button">Hold</button>
-            <div id="round-points-2"></div>
-          </div>
-        </div>
-
-      </div>
-      <div id="winner">
-        <h3>Congratulations, <span id="winner-name"></span> you won!!</h3>
-        <img src="img/tenor.gif" id="piggif">
-        <p>Thanks for playing Pig Dice!</p>
-      </div>
+    <div class="header">
+      <h2>Choose your character!</h2>
     </div>
+
+    <div class="interface">
+      <a href="#" onclick="GameManager.setGameStart('Bubbles')">
+        <img src="img/players/bubbles.jpg" alt="bubbles">
+        <div>
+          <h3>Bubbles</h3>
+          <p>Sugar, Spice and...CHEMICAL X</p>
+        </div>
+      </a>
+      <a href="#" onclick="GameManager.setGameStart('Johnny Bravo')">
+        <img src="img/players/bravo.jpg" alt="bravo">
+        <div>
+          <h3>Johnny Bravo</h3>
+          <p>Hoo...Ha...Hey</p>
+        </div>
+      </a>
+      <a href="#" onclick="GameManager.setGameStart('Courage')">
+        <img src="img/players/courage.jpg" alt="courage">
+        <div>
+          <h3>Courage</h3>
+          <p>Just a scaredy cat with the worst luck in the world. Want to give him a shot?</p>
+        </div>
+      </a>
+      <a href="#" onclick="GameManager.setGameStart('Dexter')">
+        <img src="img/players/dexter.jpg" alt="bubbles">
+        <div>
+          <h3>Dexter</h3>
+          <p>Short but smart.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="actions">
+
+    </div>
+
+    <div class="arena">
+
+    </div>
+
+    <div class="enemy">
+
+    </div>
+
   </body>
 </html>

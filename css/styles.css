@@ -1,57 +1,7 @@
-h2{
-  text-align: center;
-  font-family: 'Londrina Outline', cursive;
-  font-size: 84px;
-}
-#player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold, #winner {
-  display: none;
-}
-#play-btn {
-  display:block;
-  margin: 0 auto;
-  width: 200px;
-  font-size: 24px;
-}
-#dice {
-  display: none;
-  text-align: center;
-  margin-top: 100px;
-}
-#snoot-image, #piggif, #pleasework{
-  box-shadow: none;
+
+body{
 }
 
-#pig-dice{
-  display: none;
-}
-body{
-  background-color: #fca9a1;
-  font-family: 'Donegal One';
-}
-.btn {
-  background-color: white;
-  color: black;
-  border-color: black;
-}
-.btn:hover{
-  background-color: grey;
-}
 img{
   width: 202px;
-  display: block;
-  margin:0 auto;
-  border-radius: 25px;
-  box-shadow: 12px 12px 29px #555;
-}
-h3{
-text-align: center;
-}
-#player-input-1, #player-input-2{
-  text-align: center;
-}
-#piggif{
-  width: 400px;
-}
-#winner {
-  text-align: center;
 }
