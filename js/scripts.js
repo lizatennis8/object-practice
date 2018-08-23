@@ -24,13 +24,17 @@ Players.prototype.totalingScore = function(roundTotal) {
 
 // UI logic
 
-
+function enablePlay(buttonClick) {
+  if(buttonClick === 2) {
+    $("#play-btn").show();
+  }
+}
 
 $(document).ready(function() {
   var oneDice = "img/fatpig.png"
   function diceImages (diceDisplayed) {
     if (diceDisplayed === 1) {
-      $("#dice").html("<img src='img/snout.jpg' id='snout'>");
+      $("#dice").html("<img src='img/fatpig.png'>");
     } else if (diceDisplayed === 2) {
       $("#dice").html("<img src='img/two.jpg'>");
     } else if (diceDisplayed === 3) {
@@ -48,9 +52,12 @@ $(document).ready(function() {
   var player2Name;
   var player1;
   var player2;
+  var buttonClick = 0;
   $("#player-input-1").submit(function(event) {
     event.preventDefault();
 
+    buttonClick += 1;
+    enablePlay(buttonClick);
     player1Name = $("#player-1").val();
     player1 = new Players(player1Name);
     console.log(player1);
@@ -60,18 +67,20 @@ $(document).ready(function() {
   $("#player-input-2").submit(function(event) {
     event.preventDefault();
 
+    buttonClick += 1;
+    enablePlay(buttonClick);
     player2Name = $("#player-2").val();
     player2 = new Players(player2Name);
     $("#player-input-2").hide();
   });
 
   $("#play-btn").click(function() {
-    $(this).hide();
-    $("#dice").show();
-    $("#player-1-roll").show();
-    $("#player-1-hold").show();
-    $("#name1").text(player1Name + "'s score is:");
-    $("#name2").text(player2Name + "'s score is:");
+      $(this).hide();
+      $("#dice").show();
+      $("#player-1-roll").show();
+      $("#player-1-hold").show();
+      $("#name1").text(player1Name + "'s score is: ");
+      $("#name2").text(player2Name + "'s score is: ");
   });
 
   $("#player-1-hold").click(function() {

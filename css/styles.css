@@ -3,11 +3,11 @@ h2{
   font-family: 'Londrina Outline', cursive;
   font-size: 84px;
 }
-#player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold, #snout, #two, #three, #four, #five, #six {
+#player-1-roll, #player-1-hold, #player-2-roll, #player-2-hold {
   display: none;
 }
 #play-btn {
-  display: block;
+  display: none;
   margin: 0 auto;
 }
 #dice {
@@ -30,4 +30,11 @@ img{
   width: 202px;
   display: block;
   margin:0 auto;
+  border-radius: 20px;
+}
+h3{
+text-align: center;
+}
+#player-input-1, #player-input-2{
+  text-align: center;
 }
